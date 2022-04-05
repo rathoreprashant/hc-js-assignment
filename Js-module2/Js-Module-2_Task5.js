@@ -1,6 +1,7 @@
+"use strict";
 // 5. Provided the following  array: [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10]
 
-let array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+const array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
 
 // a. Find the sum, min, and max
 //sum
@@ -27,7 +28,7 @@ console.log("max element of array =", maxOfArray);
 function checkfullprime(element) {
     if (element > 1) {
         for (let x = 2; x < element; x++)
-            if (element % 2 == 0) return false;
+            if (element % 2 === 0) return false;
     } else return false;
     return true;
 }
@@ -38,7 +39,7 @@ array.every(checkfullprime) ? console.log("Array is full of Prime Element") : co
 function hasprime(element) {
     if (element > 1) {
         for (let x = 2; x < element; x++)
-            if (element % 2 == 0) return false;
+            if (element % 2 === 0) return false;
     } else return false;
 
     return true;
