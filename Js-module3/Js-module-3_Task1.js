@@ -1,3 +1,4 @@
+"use strict";
 // 1. Provided following array:
 
 // [
@@ -24,8 +25,9 @@ const array = [
 ]
 
 //d. Create 2 list with names starting with only ‘A’ and ‘R’ respectively
-console.log("list of names starting with 'A' ", Astartname = array.filter((x) => x.name[0] == 'A'));
-console.log("list of names starting with 'R' ", Rstartname = array.filter((x) => x.name[0] == 'R'));
+let Astartname, Rstartname;
+console.log("list of names starting with 'A' ", Astartname = array.filter(x => x.name[0] === 'A'));
+console.log("list of names starting with 'R' ", Rstartname = array.filter(x => x.name[0] === 'R'));
 
 
 //a. Print id and name of the youngest and oldest person
@@ -42,7 +44,7 @@ console.log(oldestPerson());
 
 
 //b. Create another list having id and name of all the person above 18 years
-const adult = array.filter((p) => p.age > 18);
+const adult = array.filter(p => p.age > 18);
 console.log("above 18");
 adult.map(function(p) {
     console.log(`Id: ${p.id},`, `Name: ${p.name}`)
