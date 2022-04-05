@@ -1,9 +1,11 @@
+"use strict";
+
 //Filter out even numbers
 let evenElement = function(arr) {
     let evenarr = [];
     for (let x = 0; x < arr.length; x++) {
         const element = arr[x];
-        arr[x] % 2 == 0 ? evenarr.push(element) : ""; // arr[x] % 2 == 0 ? evenarr.push(element) : oddarr.push(element);
+        arr[x] % 2 === 0 ? evenarr.push(element) : ""; // arr[x] % 2 == 0 ? evenarr.push(element) : oddarr.push(element);
     }
     return evenarr; //WE CAN ALSO return [evenarr, oddarr];
 }
@@ -13,7 +15,7 @@ let oddElement = function(arr) {
     let oddarr = [];
     for (let x = 0; x < arr.length; x++) {
         const element = arr[x];
-        arr[x] % 2 != 0 ? oddarr.push(element) : "";
+        arr[x] % 2 !== 0 ? oddarr.push(element) : "";
     }
     return oddarr;
 }
@@ -26,12 +28,12 @@ let primeElement = function(arr) {
         let isprime = true;
         const element = x;
         for (let y = 2; y < element; y++) {
-            if (element % y == 0) {
+            if (element % y === 0) {
                 isprime = false
                 break;
             }
         }
-        arr[x] >= 2 && isprime == true ? primearr.push(element) : ""; //push prime numbers in prime array
+        arr[x] >= 2 && isprime === true ? primearr.push(element) : ""; //push prime numbers in prime array
     }
     return primearr;
 }

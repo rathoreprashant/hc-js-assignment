@@ -1,8 +1,9 @@
-var array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
+"use strict";
+const array = [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
 
 //a. Find the sum, min, and max
 //sum
-let sumOfElement = function(array) {
+const sumOfElement = function(array) {
     let sum = 0;
     for (let x of array) {
         sum += x;
@@ -11,7 +12,7 @@ let sumOfElement = function(array) {
 }
 
 //min & max
-let minMaxElement = function(array) {
+const minMaxElement = function(array) {
 
     let min = array[0];
     let max = array[0];
@@ -26,12 +27,12 @@ console.log("Sum Of Element = ", sumOfElement(array));
 minMaxElement(array);
 
 //   b. Print “List is full of prime no” if every element is prime
-let isarrprime = function(arr) {
+const isarrprime = function(arr) {
     for (let x = 0; x < arr.length; x++) {
-        var isprime = true;
+        let isprime = true;
         const element = arr[x];
         for (let y = 2; y < element; y++) {
-            if (element % y == 0) {
+            if (element % y === 0) {
                 isprime = false
                 return false
             }
@@ -46,10 +47,10 @@ isarrprime(array) ? console.log("List is full of prime no") : console.log("List 
 //   c. Print “List has a prime no” if there is a prime no in it
 let hasaprime = function(arr) {
     for (let x = 0; x < arr.length; x++) {
-        var isprime = true;
+        let isprime = true;
         const element = arr[x];
         for (let y = 2; y < element; y++) {
-            if (element % y == 0) {
+            if (element % y === 0) {
                 isprime = false;
                 break;
             }
@@ -65,7 +66,7 @@ hasaprime(array) ? console.log("List has a prime no") : console.log("List does n
 let removedup = function(arr) {
     for (let x = 0; x < array.length; x++) {
         for (let y = x + 1; y < arr.length; y++) {
-            if (arr[x] == arr[y]) {
+            if (arr[x] === arr[y]) {
                 array.splice(y, 1);
             }
         }
