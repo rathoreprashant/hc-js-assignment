@@ -1,9 +1,10 @@
+"use strict";
 // 2. Implement regular expression for name with letters
 
 const str = "mayank Prashant vivek";
-const regexp = /p/i;
+let regexp = /p/i;
 
-const findat = str.search(regexp);
+let findat = str.search(regexp);
 const result = regexp.test(str);
 
 console.log(str[findat]);

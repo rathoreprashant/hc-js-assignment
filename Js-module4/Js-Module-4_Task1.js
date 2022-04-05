@@ -1,3 +1,4 @@
+"use strict";
 // 1. Implement code to deep clone any object using JSON methods
 
 const school = {
