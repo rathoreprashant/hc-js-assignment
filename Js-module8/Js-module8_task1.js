@@ -1,3 +1,4 @@
+"use strict";
 let logo = document.querySelector('#myimg');
 
 logo.src = "NOimage.jpg"; //NOimage.jpg is not exist (image1.jpg exist)
