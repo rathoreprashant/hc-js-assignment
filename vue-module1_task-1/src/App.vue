@@ -1,8 +1,32 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
+  <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+    <a class="navbar-brand ms-5 ms-5" href="#">MyApp</a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <router-link to="/" class="nav-link active" aria-current="page"
+          >Home</router-link
+        >
+      </li>
+      <li class="nav-item ms-4">
+        <router-link
+          :to="{ name: 'Login' }"
+          class="nav-link active"
+          aria-current="page"
+          >Login</router-link
+        >
+      </li>
+      <li class="nav-item ms-4">
+        <router-link
+          :to="{ name: 'SignUp' }"
+          class="nav-link active"
+          aria-current="page"
+          >SignUp</router-link
+        >
+      </li>
+    </ul>
   </nav>
-  <router-view/>
+  <br />
+  <router-view />
 </template>
 
 <style>

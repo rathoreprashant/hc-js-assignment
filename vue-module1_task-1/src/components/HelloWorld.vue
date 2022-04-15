@@ -1,5 +1,6 @@
 <template>
-  
+  <h2 v-if="show">showww me
+  </h2>
   <div class="hello">
     <h1>{{msg}}</h1>
  <hr><br>
@@ -27,9 +28,6 @@ export default {
 
 
 <style>
-body{
-  background-color: cornsilk;
-}
 .hello{
   background-color: aliceblue;
   width:max-content;
