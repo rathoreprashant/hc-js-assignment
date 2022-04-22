@@ -5,8 +5,7 @@
         <img src="./assets/images/beautyicon.png" alt="" />
         <h2 href="#!" class="blogo">Fashion Gravity</h2>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
+          ><i class="material-icons">menu</i></a>
 
         <ul class="right hide-on-med-and-down nbt">
           <li>
@@ -14,7 +13,9 @@
               ><a class="active" href="#home">home</a></router-link
             >
           </li>
-          <li><a class="black-text" href="#mensfoot">category</a></li>
+          <li><router-link to="/category" aria-current="page"
+              ><a href="#category">category</a></router-link
+            ></li>
           <li><a class="black-text" href="#women">your orders</a></li>
           <li>
             <router-link to="/about" aria-current="page"

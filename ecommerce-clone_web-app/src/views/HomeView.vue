@@ -48,7 +48,7 @@ export default {
 }
 .grid-container {
   display: grid;
-  grid-template-areas: "aside offer offer offer offer offer " "mens mens mens mens mens mens" "women women women women women women" "mensfoot mensfoot mensfoot mensfoot mensfoot mensfoot " "womenfoot womenfoot womenfoot womenfoot womenfoot womenfoot" "about about about about about about" "footer footer footer footer footer footer";
+  grid-template-areas: "aside offer offer offer offer offer " "mens mens mens mens mens mens" "women women women women women women" "mensfoot mensfoot mensfoot mensfoot mensfoot mensfoot " "womenfoot womenfoot womenfoot womenfoot womenfoot womenfoot" "about about about about about about" "footer footer footer footer footer footer" "category category category category category category";
   gap: 10px;
   align-content: center;
   padding: 10px;
