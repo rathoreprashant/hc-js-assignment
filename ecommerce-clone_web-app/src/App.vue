@@ -16,7 +16,9 @@
           <li><router-link to="/category" aria-current="page"
               ><a href="#category">category</a></router-link
             ></li>
-          <li><a class="black-text" href="#women">your orders</a></li>
+          <li><router-link to="/productdetail" aria-current="page"
+              ><a class="white-text" href="#">Product Detail</a></router-link
+            ></li>
           <li>
             <router-link to="/about" aria-current="page"
               ><a href="#about">about</a></router-link

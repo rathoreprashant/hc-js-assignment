@@ -13,10 +13,13 @@
            <div v-show="!this.filterbytitle">
             <div class="item item0">
              <h2 id="offer">filtered products</h2>
-            <div v-for="filteredproduct in filteredproducts" :key="filteredproduct">    
-              <img class="image" :src="filteredproduct.image" alt="boycloth " />
+            <div v-for="filteredproduct in filteredproducts" :key="filteredproduct.id">      
+              <div  @click="func(filteredproduct.id)">
+                <img class="image" :src="filteredproduct.image" alt="boycloth " />
               <h3>{{ filteredproduct.title }}</h3>
               <p>Rs. {{filteredproduct.price}}</p>
+              </div>
+              
          </div>
       </div>
       
@@ -31,12 +34,13 @@
             v-for="p in products"
             :key="p.id"
           >
-          
+          <div  @click="func(p.id)">
             <div v-if="p.category == cat">
               <img class="image" :src="p.image" alt="boycloth " />
               <h3>{{ p.title }}</h3>
               <p>Rs.{{p.price}}</p>
             </div>
+          </div>
            
           </div>
         </div>
@@ -89,6 +93,12 @@ export default {
     this.filteredproducts = this.products.filter((item) =>  item.price < customPrice);
     this.filterbytitle = false;
     },
+     func(pid){
+      this.$router.push({
+        name: "ProductDetail",
+        params: {pid},
+      });
+    }
   },
 };
 </script>
