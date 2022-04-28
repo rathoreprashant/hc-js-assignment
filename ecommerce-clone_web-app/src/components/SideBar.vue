@@ -68,7 +68,7 @@
               <li>Watches</li>
               <li>Perfumes & Fragrances</li>
               <li>foot Wears</li>
-              <li>Eyewear</li>
+              <li>Eyewear</li> 
               <li>Fashion Jewellery</li>
               <li>Fashion Accessories</li>
             </ol>
