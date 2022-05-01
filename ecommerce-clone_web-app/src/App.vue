@@ -19,8 +19,14 @@
           <li><router-link to="/productdetail" aria-current="page"
               ><a class="white-text" href="#">Product Detail</a></router-link
             ></li>
+            <li><router-link to="/signupview" aria-current="page"
+              ><a class="white-text" href="#">SignUp</a></router-link
+            ></li>
+            <li><router-link to="/loginview" aria-current="page"
+              ><a class="white-text" href="#">Login</a></router-link
+            ></li>
           <li>
-            <router-link to="/about" aria-current="page"
+            <router-link to="/about" aria-current="page" 
               ><a href="#about">about</a></router-link
             >
           </li>
