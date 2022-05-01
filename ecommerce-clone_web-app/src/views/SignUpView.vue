@@ -87,7 +87,7 @@ export default {
           fname: this.signup.fullname,
           email: this.signup.email,
           password: this.signup.password,
-        }; 
+        };
         let userdata;
 
         localStorage.getItem("userdata") === null

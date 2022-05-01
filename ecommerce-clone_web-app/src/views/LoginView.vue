@@ -83,14 +83,18 @@ export default {
               },
             })
               .then((res) => res.json())
-              .then((json) => console.log(json));
-               
+              .then((json) => {
+                localStorage.setItem("token", json.token);
+                console.log(localStorage.getItem("token"));
+              });
+
+            this.$router.push({ name: "home" });
           } else {
             e.preventDefault();
             this.login.show = true;
           }
         } else {
-          e.preventDefault(); 
+          e.preventDefault();
           this.login.show = true;
         }
       });

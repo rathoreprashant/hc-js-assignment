@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <p class="white text">My Token {{ this.token }}</p>
     <HomeSlider />
 
     <div class="grid-container white-text" style="text-align: center">
@@ -38,6 +39,11 @@ export default {
     MensfootsSection,
     AboutSection,
     FooterSection,
+  },
+  data() {
+    return {
+      token: localStorage.token,
+    };
   },
 };
 </script>
