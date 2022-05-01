@@ -48,6 +48,12 @@
 </template>
 
 <script>
+import axios from "axios";
+axios.interceptors.request.use((config) => {
+  console.log(`${config.method} request sent to [ ${config.url}]`); 
+  return config;
+});
+
 export default {
   name: "LoginView",
   data() {
@@ -62,7 +68,18 @@ export default {
     };
   },
   methods: {
-    loginfunc(e) {
+    async loginfunc(e) {
+      const credentials = {
+        username: "mor_2314",
+        password: "83r5^_",
+      };
+      let config = {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "*/*",
+          Authorization: "token@rathore.prashant",
+        },
+      };
       const userdata = JSON.parse(localStorage.getItem("userdata"));
       userdata.find((a) => {
         if (a.email == this.login.email) {
@@ -71,24 +88,20 @@ export default {
             this.login.fullname = a.fname;
 
             console.log("getting Token...");
-            fetch("https://fakestoreapi.com/auth/login", {
-              method: "POST",
-              body: JSON.stringify({
-                username: "mor_2314", //here we can post "this.login.email"
-                password: "83r5^_", //here we can post "this.login.password"
-              }),
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "*/*",
-              },
-            })
-              .then((res) => res.json())
-              .then((json) => {
-                localStorage.setItem("token", json.token);
-                console.log(localStorage.getItem("token"));
+            axios
+              .post(
+                "https://fakestoreapi.com/auth/login",
+                JSON.stringify(credentials),
+                config
+              )
+              .then((res) => {
+                console.log(res.data.token);
+                localStorage.token = res.data.token;
+                this.$router.push({ name: "home" });
+              })
+              .catch((err) => {
+                alert(err);
               });
-
-            this.$router.push({ name: "home" });
           } else {
             e.preventDefault();
             this.login.show = true;
