@@ -3,15 +3,18 @@
     <img class="icon" src="../assets/images/loginlogo1.png" />
     <!-- SignUp form -->
     <form action="">
-      <h1 class="main_heading">SignUp</h1>
+      <h1 class="main_heading">{{$t('signIn')}}</h1>
       <!-- Name -->
+      <label for="fname">{{$t('FirstName')}}</label>
       <input
         type="text"
         class="all"
+        id="fname"  
         name="name"
-        placeholder="First name"
+        placeholder='FirstName'
         v-model="signup.fname"
       /><span style="color: red">*</span>
+      <label for="fname">{{$t('LastName')}}</label>
       <input
         type="text"
         class="all"
@@ -21,6 +24,7 @@
       /><span style="color: red">*</span>
 
       <!--email-->
+      <label for="fname">{{$t('Email')}}</label>
       <input
         type="email"
         class="all"
@@ -30,6 +34,7 @@
       /><span style="color: red">*</span>
 
       <!--password-->
+      <label for="fname">{{$t('Password')}}</label>
       <input
         type="password"
         class="all"
@@ -39,6 +44,7 @@
       <h2 v-if="signup.show" style="color: red; font-size: 20px">
         The password confirmation does not match
       </h2>
+      <label for="fname">{{$t('ConfirmPassword')}}</label>
       <input
         type="password"
         class="all"
@@ -136,7 +142,8 @@ body {
 
 .container label {
   font-weight: bold;
-  color: antiquewhite;
+  color: white;
+  font-size: 1em;
 }
 .all {
   width: 100%;
